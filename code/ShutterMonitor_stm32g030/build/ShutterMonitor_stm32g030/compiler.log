@@ -1,0 +1,39 @@
+>>> cc
+
+
+".\Core\Src\main.c", line 110: Warning:  #870-D: invalid multibyte character sequence
+    printf("[OK] 系统初始化成�?!\r\n");
+                           ^
+".\Core\Src\main.c", line 114: Warning:  #870-D: invalid multibyte character sequence
+      printf("[ERROR] SMU初始化失�?!\r\n");
+                                ^
+".\Core\Src\main.c", line 117: Warning:  #870-D: invalid multibyte character sequence
+    printf("[OK] SMU初始化成�?!\r\n");
+                           ^
+.\Core\Src\main.c: 3 warnings, 0 errors
+".\SMU\SMU.c", line 32: Warning:  #870-D: invalid multibyte character sequence
+    printf("[INFO] ADC校准开�?!\r\n");
+                            ^
+".\SMU\SMU.c", line 43: Warning:  #870-D: invalid multibyte character sequence
+      printf("[ERROR] 定时器启动失�?!\r\n");
+                                ^
+".\SMU\SMU.c", line 46: Warning:  #870-D: invalid multibyte character sequence
+    printf("[OK] 定时器启�?!\r\n");
+                        ^
+".\SMU\SMU.c", line 49: Warning:  #870-D: invalid multibyte character sequence
+      printf("[ERROR] ADC连续转换开始失�?!\r\n");
+                                     ^
+".\SMU\SMU.c", line 52: Warning:  #870-D: invalid multibyte character sequence
+    printf("[OK] ADC连续转换开�?!\r\n");
+                             ^
+".\SMU\SMU.c", line 56: Warning:  #870-D: invalid multibyte character sequence
+    printf("[INFO] 开始读取暗光下的电�?!\r\n");
+                                  ^
+".\SMU\SMU.c", line 126: Warning:  #870-D: invalid multibyte character sequence
+    printf("快门打开光强积分: %g，打开时间计数�?: %llu，打开时间: %llums\r\n", *open_sum_f, *open_span, (uint64_t) ( (*open_span) / 20));
+                                        ^
+.\SMU\SMU.c: 7 warnings, 0 errors
+
+>>> ld
+
+Program Size: Code=16276 RO-data=520 RW-data=36 ZI-data=4748  

@@ -1,0 +1,132 @@
+[2024-02-27 22:34:45]	[done]
+	build successfully !
+
+[2024-02-29 22:43:59]	[done]
+	build successfully !
+
+[2024-02-29 22:46:11]	compilation failed at : "f:\Develope\ShutterSpeedCalibrator\code\ShutterMonitor_stm32g030\Core\Src\main.c", exit code: 1
+command: 
+  "e:\Software\keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -ICore/Inc -IDrivers/STM32G0xx_HAL_Driver/Inc -IDrivers/STM32G0xx_HAL_Driver/Inc/Legacy -IDrivers/CMSIS/Device/ST/STM32G0xx/Include -IDrivers/CMSIS/Include -IMDK-ARM/RTE/_ShutterMonitor_stm32g030 -I.eide/deps -ISMU -DUSE_HAL_DRIVER -DSTM32G030xx --cpu Cortex-M0+ --li --c99 -D__MICROLIB -O3 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\ShutterMonitor_stm32g030\.obj\Core\Src\main.o --no_depend_system_headers --depend .\build\ShutterMonitor_stm32g030\.obj\Core\Src\main.d .\Core\Src\main.c
+   at unify_builder.Program.compileByMulThread(Int32 thrNum, CmdInfo[] cmds_, List`1 errLogs)
+   at unify_builder.Program.Main(String[] args_)
+---
+".\Core\Src\main.c", line 103: Warning:  #870-D: invalid multibyte character sequence
+    printf("[OK] 系统初始化成�?!\r\n");
+                           ^
+".\Core\Src\main.c", line 104: Warning:  #870-D: invalid multibyte character sequence
+    printf("[INFO] ADC校准开�?!\r\n");
+                            ^
+".\Core\Src\main.c", line 107: Warning:  #870-D: invalid multibyte character sequence
+    printf("[INFO] ADC转换开�?!\r\n");
+                            ^
+".\Core\Src\main.c", line 108: Error:  #20: identifier "My_adcData" is undefined
+    HAL_ADC_Start_DMA(&hadc1, (uint32_t *)My_adcData, adc_max );
+                                          ^
+".\Core\Src\main.c", line 108: Error:  #20: identifier "adc_max" is undefined
+    HAL_ADC_Start_DMA(&hadc1, (uint32_t *)My_adcData, adc_max );
+                                                      ^
+.\Core\Src\main.c: 3 warnings, 2 errors
+
+[2024-02-29 22:47:39]	[done]
+	build successfully !
+
+[2024-02-29 23:29:03]	compilation failed at : "f:\Develope\ShutterSpeedCalibrator\code\ShutterMonitor_stm32g030\SMU\SMU.c", exit code: 1
+command: 
+  "e:\Software\keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -ICore/Inc -IDrivers/STM32G0xx_HAL_Driver/Inc -IDrivers/STM32G0xx_HAL_Driver/Inc/Legacy -IDrivers/CMSIS/Device/ST/STM32G0xx/Include -IDrivers/CMSIS/Include -IMDK-ARM/RTE/_ShutterMonitor_stm32g030 -I.eide/deps -ISMU -DUSE_HAL_DRIVER -DSTM32G030xx --cpu Cortex-M0+ --li --c99 -D__MICROLIB -O3 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\ShutterMonitor_stm32g030\.obj\SMU\SMU.o --no_depend_system_headers --depend .\build\ShutterMonitor_stm32g030\.obj\SMU\SMU.d .\SMU\SMU.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\SMU\SMU.c", line 19: Warning:  #870-D: invalid multibyte character sequence
+    printf("[INFO] ADC校准开�?!\r\n");
+                            ^
+".\SMU\SMU.c", line 24: Error:  #20: identifier "ADC_Data" is undefined
+    hst = HAL_ADC_Start_DMA(&hadc1, (uint32_t *) ADC_Data, 2);
+                                                 ^
+".\SMU\SMU.c", line 25: Warning:  #870-D: invalid multibyte character sequence
+    printf("[OK] ADC连续转换开�?!\r\n");
+                             ^
+".\SMU\SMU.c", line 26: Warning:  #940-D: missing return statement at end of non-void function "InitSMU" 
+  }
+  ^
+".\SMU\SMU.c", line 15: Warning:  #550-D: variable "hst"  was set but never used
+    HAL_StatusTypeDef hst = HAL_OK;
+                      ^
+.\SMU\SMU.c: 4 warnings, 1 error
+
+[2024-02-29 23:29:53]	compilation failed at : "f:\Develope\ShutterSpeedCalibrator\code\ShutterMonitor_stm32g030\Core\Src\main.c", exit code: 1
+command: 
+  "e:\Software\keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -ICore/Inc -IDrivers/STM32G0xx_HAL_Driver/Inc -IDrivers/STM32G0xx_HAL_Driver/Inc/Legacy -IDrivers/CMSIS/Device/ST/STM32G0xx/Include -IDrivers/CMSIS/Include -IMDK-ARM/RTE/_ShutterMonitor_stm32g030 -I.eide/deps -ISMU -DUSE_HAL_DRIVER -DSTM32G030xx --cpu Cortex-M0+ --li --c99 -D__MICROLIB -O3 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\ShutterMonitor_stm32g030\.obj\Core\Src\main.o --no_depend_system_headers --depend .\build\ShutterMonitor_stm32g030\.obj\Core\Src\main.d .\Core\Src\main.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\Core\Src\main.c", line 102: Warning:  #870-D: invalid multibyte character sequence
+    printf("[OK] 系统初始化成�?!\r\n");
+                           ^
+".\Core\Src\main.c", line 118: Error:  #20: identifier "ADC_Data" is undefined
+        printf("PA%d:  %.4fV\r\n",i,ADC_Data[i]*3.3/4096);
+                                    ^
+.\Core\Src\main.c: 1 warning, 1 error
+
+[2024-02-29 23:30:10]	compilation failed at : "f:\Develope\ShutterSpeedCalibrator\code\ShutterMonitor_stm32g030\Core\Src\main.c", exit code: 1
+command: 
+  "e:\Software\keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -ICore/Inc -IDrivers/STM32G0xx_HAL_Driver/Inc -IDrivers/STM32G0xx_HAL_Driver/Inc/Legacy -IDrivers/CMSIS/Device/ST/STM32G0xx/Include -IDrivers/CMSIS/Include -IMDK-ARM/RTE/_ShutterMonitor_stm32g030 -I.eide/deps -ISMU -DUSE_HAL_DRIVER -DSTM32G030xx --cpu Cortex-M0+ --li --c99 -D__MICROLIB -O3 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\ShutterMonitor_stm32g030\.obj\Core\Src\main.o --no_depend_system_headers --depend .\build\ShutterMonitor_stm32g030\.obj\Core\Src\main.d .\Core\Src\main.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\Core\Src\main.c", line 102: Warning:  #870-D: invalid multibyte character sequence
+    printf("[OK] 系统初始化成�?!\r\n");
+                           ^
+".\Core\Src\main.c", line 118: Error:  #20: identifier "ADC_Data" is undefined
+        printf("PA%d:  %.4fV\r\n",i,ADC_Data[i]*3.3/4096);
+                                    ^
+.\Core\Src\main.c: 1 warning, 1 error
+
+[2024-02-29 23:30:27]	compilation failed at : "f:\Develope\ShutterSpeedCalibrator\code\ShutterMonitor_stm32g030\Core\Src\main.c", exit code: 1
+command: 
+  "e:\Software\keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -ICore/Inc -IDrivers/STM32G0xx_HAL_Driver/Inc -IDrivers/STM32G0xx_HAL_Driver/Inc/Legacy -IDrivers/CMSIS/Device/ST/STM32G0xx/Include -IDrivers/CMSIS/Include -IMDK-ARM/RTE/_ShutterMonitor_stm32g030 -I.eide/deps -ISMU -DUSE_HAL_DRIVER -DSTM32G030xx --cpu Cortex-M0+ --li --c99 -D__MICROLIB -O3 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\ShutterMonitor_stm32g030\.obj\Core\Src\main.o --no_depend_system_headers --depend .\build\ShutterMonitor_stm32g030\.obj\Core\Src\main.d .\Core\Src\main.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\Core\Src\main.c", line 102: Warning:  #870-D: invalid multibyte character sequence
+    printf("[OK] 系统初始化成�?!\r\n");
+                           ^
+".\Core\Src\main.c", line 118: Error:  #20: identifier "ADC_Data" is undefined
+        printf("PA%d:  %.4fV\r\n",i,ADC_Data[i]*3.3/4096);
+                                    ^
+.\Core\Src\main.c: 1 warning, 1 error
+
+[2024-02-29 23:30:35]	compilation failed at : "f:\Develope\ShutterSpeedCalibrator\code\ShutterMonitor_stm32g030\Core\Src\main.c", exit code: 1
+command: 
+  "e:\Software\keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -ICore/Inc -IDrivers/STM32G0xx_HAL_Driver/Inc -IDrivers/STM32G0xx_HAL_Driver/Inc/Legacy -IDrivers/CMSIS/Device/ST/STM32G0xx/Include -IDrivers/CMSIS/Include -IMDK-ARM/RTE/_ShutterMonitor_stm32g030 -I.eide/deps -ISMU -DUSE_HAL_DRIVER -DSTM32G030xx --cpu Cortex-M0+ --li --c99 -D__MICROLIB -O3 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\ShutterMonitor_stm32g030\.obj\Core\Src\main.o --no_depend_system_headers --depend .\build\ShutterMonitor_stm32g030\.obj\Core\Src\main.d .\Core\Src\main.c
+   at unify_builder.Program.compileByMulThread(Int32 thrNum, CmdInfo[] cmds_, List`1 errLogs)
+   at unify_builder.Program.Main(String[] args_)
+---
+".\Core\Src\main.c", line 102: Warning:  #870-D: invalid multibyte character sequence
+    printf("[OK] 系统初始化成�?!\r\n");
+                           ^
+".\Core\Src\main.c", line 118: Error:  #20: identifier "ADC_Data" is undefined
+        printf("PA%d:  %.4fV\r\n",i,ADC_Data[i]*3.3/4096);
+                                    ^
+.\Core\Src\main.c: 1 warning, 1 error
+
+[2024-02-29 23:31:15]	compilation failed at : "f:\Develope\ShutterSpeedCalibrator\code\ShutterMonitor_stm32g030\Core\Src\main.c", exit code: 1
+command: 
+  "e:\Software\keil\ARM\ARMCC\bin\armcc.exe" -c --apcs=interwork -ICore/Inc -IDrivers/STM32G0xx_HAL_Driver/Inc -IDrivers/STM32G0xx_HAL_Driver/Inc/Legacy -IDrivers/CMSIS/Device/ST/STM32G0xx/Include -IDrivers/CMSIS/Include -IMDK-ARM/RTE/_ShutterMonitor_stm32g030 -I.eide/deps -ISMU -DUSE_HAL_DRIVER -DSTM32G030xx --cpu Cortex-M0+ --li --c99 -D__MICROLIB -O3 --split_sections --diag_suppress=1 --diag_suppress=1295 -g -o .\build\ShutterMonitor_stm32g030\.obj\Core\Src\main.o --no_depend_system_headers --depend .\build\ShutterMonitor_stm32g030\.obj\Core\Src\main.d .\Core\Src\main.c
+   at unify_builder.Program.Main(String[] args_)
+---
+".\Core\Src\main.c", line 103: Warning:  #870-D: invalid multibyte character sequence
+    printf("[OK] 系统初始化成�?!\r\n");
+                           ^
+".\Core\Src\main.c", line 118: Error:  #20: identifier "ADC_Data" is undefined
+        printf("PA%d:  %.4fV\r\n",i,ADC_Data[i]*3.3/4096);
+                                    ^
+.\Core\Src\main.c: 1 warning, 1 error
+
+[2024-02-29 23:31:34]	[done]
+	build successfully !
+
+[2024-02-29 23:35:00]	[done]
+	build successfully !
+
+[2024-02-29 23:35:05]	[done]
+	build successfully !
+
+[2024-03-07 17:44:29]	[done]
+	build successfully !
+
